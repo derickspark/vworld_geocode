@@ -16,15 +16,17 @@ vworld_geocode <- function(address, api_key) {
     type = "road",
     key = api_key
   )
-  full_url <- paste0(url, "?service=", params$service,
-                     "&request=", params$request,
-                     "&version=", params$version,
-                     "&address=", curlEscape(params$address),
-                     "&refine=", params$refine,
-                     "&simple=", params$simple,
-                     "&format=", params$format,
-                     "&type=", params$type,
-                     "&key=", params$key)
+  full_url <- paste0(
+    url, "?service=", params$service,
+    "&request=", params$request,
+    "&version=", params$version,
+    "&address=", RCurl::curlEscape(params$address),
+    "&refine=", params$refine,
+    "&simple=", params$simple,
+    "&format=", params$format,
+    "&type=", params$type,
+    "&key=", params$key
+  )
   response <- httr::GET(full_url)
   if (httr::http_status(response)$category == "Success") {
     content <- jsonlite::fromJSON(httr::content(response, "text", encoding = "UTF-8"))
