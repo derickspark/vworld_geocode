@@ -1,0 +1,16 @@
+Package: vworldgeocodeR
+Type: Package
+Title: Simple VWorld Geocoding Utilities
+Version: 0.1.0
+Author: Your Name
+Maintainer: Your Name <your@email.com>
+Description: Provides functions to geocode Korean addresses using the VWorld API, including batch geocoding with progress bar.
+Depends: R (>= 3.5.0)
+Imports:
+    httr,
+    RCurl,
+    jsonlite,
+    progress
+License: MIT
+Encoding: UTF-8
+LazyData: true
