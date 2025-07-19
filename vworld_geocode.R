@@ -4,6 +4,12 @@
 #' @return 데이터프레임(lat, lon 등)
 #' @export
 vworld_geocode <- function(address, api_key) {
+  # RCurl 패키지가 없으면 설치하고 불러오기
+  if (!requireNamespace("RCurl", quietly = TRUE)) {
+    install.packages("RCurl")
+  }
+  library(RCurl)
+  
   url <- "https://api.vworld.kr/req/address"
   params <- list(
     service = "address",
@@ -20,7 +26,7 @@ vworld_geocode <- function(address, api_key) {
     url, "?service=", params$service,
     "&request=", params$request,
     "&version=", params$version,
-    "&address=", RCurl::curlEscape(params$address),
+    "&address=", curlEscape(params$address),
     "&refine=", params$refine,
     "&simple=", params$simple,
     "&format=", params$format,
