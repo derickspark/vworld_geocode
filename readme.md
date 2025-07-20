@@ -4,7 +4,7 @@ VWorld 도로명 주소 지오코딩을 위한 간단 패키지입니다.
 
 ```r
 install.packages("remotes")  # remotes 패키지가 없으면 먼저 설치
-remotes::install_github("derickspark/vworld_geocode")
+remotes::install_github("derickspark/vworldgeocodeR")
 ```
 
 VWorld API 키는 다음과 같이 발급받으실 수 있습니다. 
