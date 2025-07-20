@@ -1,4 +1,7 @@
-#' VWorld 단일 주소 지오코딩
+#' 단일 주소를 VWorld API로 지오코딩
+#' @param address 주소(문자열)
+#' @param api_key VWorld API 키
+#' @return 데이터프레임(address, lat, lon, status)
 #' @export
 vworld_geocode <- function(address, api_key) {
   url <- "https://api.vworld.kr/req/address"
