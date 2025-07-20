@@ -7,8 +7,8 @@ Maintainer: Your Name <your@email.com>
 Description: Provides functions to geocode Korean addresses using the VWorld API, including batch geocoding with progress bar.
 Depends: R (>= 3.5.0)
 Imports:
-    httr,
     RCurl,
+    httr,
     jsonlite,
     progress
 License: MIT
