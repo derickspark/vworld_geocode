@@ -1,15 +1,6 @@
-#' Geocode a single address using VWorld API
-#' @param address 주소(문자열)
-#' @param api_key VWorld API 키
-#' @return 데이터프레임(lat, lon 등)
+#' VWorld 단일 주소 지오코딩
 #' @export
 vworld_geocode <- function(address, api_key) {
-  # RCurl 패키지가 없으면 설치하고 불러오기
-  if (!requireNamespace("RCurl", quietly = TRUE)) {
-    install.packages("RCurl")
-  }
-  library(RCurl)
-  
   url <- "https://api.vworld.kr/req/address"
   params <- list(
     service = "address",
