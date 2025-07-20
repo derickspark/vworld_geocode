@@ -17,7 +17,7 @@ vworld_geocode <- function(address, api_key) {
     url, "?service=", params$service,
     "&request=", params$request,
     "&version=", params$version,
-    "&address=", curlEscape(params$address),
+    "&address=", RCurl::curlEscape(params$address),
     "&refine=", params$refine,
     "&simple=", params$simple,
     "&format=", params$format,
