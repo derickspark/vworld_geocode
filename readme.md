@@ -3,6 +3,7 @@
 VWorld 도로명 주소 지오코딩을 위한 간단 패키지입니다.
 
 ```r
+install.packages("Rcurl")  # Rcurl 패키지가 없으면 먼저 설치
 install.packages("remotes")  # remotes 패키지가 없으면 먼저 설치
 remotes::install_github("derickspark/vworldgeocodeR")
 ```
@@ -10,10 +11,11 @@ remotes::install_github("derickspark/vworldgeocodeR")
 Rcurl 이 설치되어 있어야 합니다 !! 
 
 ** 중요 !! ** 
-VWorld API 키는 다음과 같이 발급받으실 수 있습니다. 
-1. World 개발자센터 (https://www.vworld.kr)접속 후 회원가입
-2. “오픈API 신청” → “인증키 발급”
-3. 발급받은 인증키를 코드에 입력 
+V-World API 키는 다음과 같이 발급받으실 수 있습니다. 
+1. V-World 개발자센터 (https://www.vworld.kr) 접속 후 회원가입 필수!! 
+2. V-world 상단 메뉴 중 `오픈API` → `인증키 발급`
+   (서비스유형은 `기타`, 활용API는 `2D 지도 API` 로 선택)
+4. 발급받은 인증키를 복사(CTRL+C) 하여 아래와 같이 코드로 붙여넣기
 
 ## 사용 예시 
  ```r
