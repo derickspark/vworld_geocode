@@ -8,9 +8,9 @@ remotes::install_github("derickspark/vworld_geocode")
 ```
 
 VWorld API 키는 다음과 같이 발급받으실 수 있습니다. 
-	1.	VWorld 개발자센터 (https://www.vworld.kr)접속 후 회원가입 
-	2.	“오픈API 신청” → “인증키 발급”
-	3.	발급받은 인증키를 코드에 입력 
+1. World 개발자센터 (https://www.vworld.kr)접속 후 회원가입
+2. “오픈API 신청” → “인증키 발급”
+3. 발급받은 인증키를 코드에 입력 
 
  ## 사용 예시 
  ```r
