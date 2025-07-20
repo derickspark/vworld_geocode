@@ -1,7 +1,7 @@
-#' Batch geocode multiple addresses using VWorld API
+#' 여러 주소를 VWorld API로 일괄 지오코딩
 #' @param addresses 주소 벡터
 #' @param api_key VWorld API 키
-#' @return 데이터프레임
+#' @return 데이터프레임(address, lat, lon, status)
 #' @export
 batch_geocode <- function(addresses, api_key) {
   total <- length(addresses)
