@@ -18,13 +18,14 @@ VWorld API 키는 다음과 같이 발급받으실 수 있습니다.
 ## 사용 예시 
  ```r
 library(vworldgeocodeR)
+api_key <- "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" #여기에_본인_API_KEY_입력
 ```
 ---------------------------------------------
 ### 주소 하나를 지오코딩하는 경우
 ```r
 result <- vworld_geocode(
   address = "서울특별시 중구 세종대로 110",
-  api_key = "여기에_본인_API_KEY_입력"
+  api_key
 )
 print(result)
 ```
@@ -42,7 +43,7 @@ addr_list <- c(
 )
 results <- batch_geocode(
   addresses = addr_list,
-  api_key = "여기에_본인_API_KEY_입력"
+  api_key 
 )
 print(results)
 ```
